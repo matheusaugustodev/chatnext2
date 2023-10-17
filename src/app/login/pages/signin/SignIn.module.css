@@ -1,0 +1,68 @@
+/* :root {
+  --text: #edf1f7;
+  --red: #c51212;
+  --blue: #0041c2;
+  --green: #14b02d;
+  --yellow: #ffc12b;
+} */
+
+/* .signArea {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: auto;
+    display: flex;
+    text-align: center;
+    width: 80%;
+}
+
+.formSignIn {
+    display: flex;
+    flex-direction: column;
+}
+
+.area {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (width <= 900px) {
+    .signArea {
+        flex-wrap: wrap;
+    }
+
+    .area {
+        width: 100%;
+    }
+} */
+
+/* :root {
+  --text: #edf1f7;
+  --red: #c51212;
+  --blue: #0041c2;
+  --green: #14b02d;
+  --yellow: #ffc12b;
+} */
+
+/* .areaSign {
+    background-color: #ff4745;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+} */
+
+/* .areaSign button {
+    background-color: inherit;
+    padding: 0.5rem 3rem;
+    border-radius: 2rem;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #ffffff;
+}
+  
+.areaSign button:hover {
+    background-color: #ffffff;
+    color: #ff4745;
+} */
