@@ -9,8 +9,11 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 
+interface SignInProps {
+  AcessSign: () => void;
+}
 
-export default function SignIn({ AcessSign }) {
+export default function SignIn({ AcessSign }: SignInProps ) {
 
     return (
         <>

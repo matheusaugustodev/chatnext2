@@ -26,33 +26,20 @@ const formSchema = z.object({
     }),
 });
 
-const setToken = () => {
-  localStorage.setItem("token", "12345");
-};
+interface SignInProps {
+  AcessSign: () => void;
+}
 
-export default function SignUp({ AcessSign }) {
+export default function SignUp({ AcessSign }: SignInProps) {
   return (
     <>
-      <Card onClick={setToken} className="w-full md:w-1/2">
+      <Card className="w-full md:w-1/2">
         <CardHeader>
           <CardTitle>Sign Up</CardTitle>
           <CardDescription>User your account</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
           <Forms />
-          {/* <div className='flex flex-col gap-2'>
-                        <Label htmlFor="Name">Name</Label>
-                        <Input type='Name' placeholder='Name'></Input>
-                    </div>
-                    <div className='flex flex-col gap-2'>
-                        <Label htmlFor="Email">Email</Label>
-                        <Input type='Email' placeholder='Email'></Input>
-                    </div>
-                    <div className='flex flex-col gap-2'>
-                        <Label htmlFor="Password">Password</Label>
-                        <Input type='Password' placeholder='Password'></Input>
-                    </div>
-                    <Button>Sign Up</Button> */}
         </CardContent>
       </Card>
       <Card className="w-full md:w-1/2">

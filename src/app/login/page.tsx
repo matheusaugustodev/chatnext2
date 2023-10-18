@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import SignIn from "./pages/signin/SignIn";
+import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 
 export default function Login() {
@@ -10,16 +10,17 @@ export default function Login() {
     if (showSignUp) setShowSignUp(false);
     else setShowSignUp(true);
   };
+  type AcessSignFunction = () => void; 
 
   return (
     <>
       <div className={`flex flex-col content-center p-5 gap-7 flex-wrap`}>
-        <SignUp AcessSign={AcessSign}/>
-        {/* {showSignUp ? (
-          <SignUp AcessSign={AcessSign} />
+        {/* <SignUp AcessSign={AcessSign}/> */}
+        {showSignUp ? (
+          <SignUp AcessSign={AcessSign as AcessSignFunction} />
         ) : (
-          <SignUp AcessSign={AcessSign} />
-        )} */}
+          <SignIn AcessSign={AcessSign as AcessSignFunction} />
+        )}
       </div>
     </>
   );

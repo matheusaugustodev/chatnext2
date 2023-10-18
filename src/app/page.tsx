@@ -1,34 +1,44 @@
 'use client';
 import React, { useState, useEffect } from 'react'
 import Login from './login/page';
+import Homepage from './pages/Homepage';
 
-
-const fetchData = async () => {
-  try {
-    const response = await fetch("http://localhost:3001/");
-    const data = await response.json();
-    // Agora, 'data' contém os dados da resposta da requisição
-    console.log(data);
-  } catch (error) {
-    console.error('Erro ao buscar dados:', error);
-  }
-}
-
-
+// const fetchData = async () => {
+//   try {
+//     const response = await fetch("http://localhost:3001/");
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.error('Erro ao buscar dados:', error);
+//   }
+// }
 
 export default function Home() {
+  const createUser = async () => {
+  
+    const response = await fetch("http://localhost:3001/user/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // body: JSON.stringify(user)
+    });
+    const data = await response.json();
+    console.log(data);
+    localStorage.setItem('data', data)
+  
+  };
   // const socket = io('http://localhost:3001')
   useEffect(() => {
     const socket = new WebSocket('ws://localhost:3001')
-    
   })
 
-  const [logged, setLogged] = useState(1)
-
+  const [logged, setLogged] = useState(0)
+  
   return (
     <>
       <div className='p-4'>
-        {logged ? <Login /> : ''}
+        {logged ? <Homepage /> : <Login />}
       </div>
     </>
   )

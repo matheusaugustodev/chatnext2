@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from './components/Navbar/Navbar'
 import { ThemeProvider } from "@/components/theme-provider"
-import Head from 'next/head'
 import { Toaster } from '@/components/ui/toaster'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,16 +18,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-        <head>
-          <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-        </head>
+    <html lang="en" suppressHydrationWarning>
         <body className='bg-zinc-950'>
           <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
             >
             <Navbar/>
             <hr className='white'/>
