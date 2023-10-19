@@ -1,5 +1,3 @@
-'use client';
-import React, { useState, useEffect } from 'react'
 import Login from './login/page';
 import Homepage from './pages/Homepage';
 
@@ -16,7 +14,7 @@ import Homepage from './pages/Homepage';
 export default function Home() {
   const createUser = async () => {
   
-    const response = await fetch("http://localhost:3001/user/signup", {
+    const response = await fetch("https://chatnext.azurewebsites.net/user/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,12 +27,9 @@ export default function Home() {
   
   };
   // const socket = io('http://localhost:3001')
-  useEffect(() => {
-    const socket = new WebSocket('ws://localhost:3001')
-  })
+    const socket = new WebSocket('wss://chatnext.azurewebsites.net')
 
-  const [logged, setLogged] = useState(0)
-  
+  const logged = 0
   return (
     <>
       <div className='p-4'>

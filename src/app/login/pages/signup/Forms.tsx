@@ -40,7 +40,7 @@ export default function Forms() {
   
   const createUser = async (user: ObjectParam) => {
 
-    const response = await fetch("http://localhost:3001/user/signup", {
+    const response = await fetch("https://chatnext.azurewebsites.net/user/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
